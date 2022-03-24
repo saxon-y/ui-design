@@ -13,8 +13,18 @@
         width: 100%;
       }
 
-      img {
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #content {
         width: 100%;
+      }
+
+      img {
+        max-width: 100%;
       }
 
       img + img {
@@ -23,7 +33,45 @@
     </style>
   </head>
   <body>
-    <img src="./images/ui1.png" alt="" />
-    <img src="./images/ui2.png" alt="" />
+    <div id="content"></div>
   </body>
+  <script>
+    var imgs = [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.gif",
+      "6.png",
+      "7.png",
+      "8.gif",
+      "9.png",
+      "9.5.gif",
+      "10.png",
+      "10.1.png",
+      "10.2.png",
+      "10.3.png",
+      "10.4.png",
+      "10.5.png",
+      "10.6.png",
+      "10.7.png",
+      "10.8.png",
+      "10.9.png",
+      "10.9.1.png",
+      "11.png",
+      "12.png",
+      "13.png",
+      "14.png",
+      "14.5.png",
+      "15.png",
+      "16.png",
+    ];
+    var content = document.querySelector("#content");
+    imgs.forEach((el) => {
+      var img = document.createElement("img");
+      img.src = `./images/${el}`;
+      img.alt = "";
+      content.appendChild(img);
+    });
+  </script>
 </html>
